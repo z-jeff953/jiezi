@@ -1,10 +1,4 @@
 import path from 'path'
-
-require('dotenv').config({
-  path: path.resolve(path.join(__dirname, '../../'), '.env')
-})
-
-import express from 'express'
 import app from './app'
 
 const PORT = process.env.PORT || 3006

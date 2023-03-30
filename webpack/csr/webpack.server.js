@@ -1,11 +1,9 @@
 const path = require('path')
 const nodeExternals = require('webpack-node-externals')
-const baseConfig = require('../webpack.base')
+const baseServerConfig = require('../webpack.server')
 const { merge } = require('webpack-merge')
 
 const config = {
-  target: 'node',
-  externals: [nodeExternals()], // 移除 node 模块不打包
   entry: './cli/csr/server/index.js',
   output: {
     path: path.resolve(
@@ -16,4 +14,4 @@ const config = {
   }
 }
 
-module.exports = merge(baseConfig, config)
+module.exports = merge(baseServerConfig, config)
