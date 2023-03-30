@@ -1,5 +1,4 @@
 const path = require('path')
-const nodeExternals = require('webpack-node-externals')
 const baseServerConfig = require('../webpack.server')
 const { merge } = require('webpack-merge')
 

@@ -3,10 +3,6 @@ const baseConfig = require('./webpack.base')
 const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-require('dotenv').config({
-  path: path.resolve(path.join(__dirname, '../'), '.env')
-})
-
 const PORT = process.env.PORT || 3006
 
 const config = {

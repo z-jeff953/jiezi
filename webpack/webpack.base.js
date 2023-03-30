@@ -1,6 +1,9 @@
 const path = require('path')
-const nodeExternals = require('webpack-node-externals')
 const Dotenv = require('dotenv-webpack')
+
+require('dotenv').config({
+  path: path.resolve(path.join(__dirname, '../'), '.env')
+})
 
 module.exports = {
   resolve: {
