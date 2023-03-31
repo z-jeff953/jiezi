@@ -3,12 +3,10 @@ const baseConfig = require('./webpack.base')
 const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const PORT = process.env.PORT || 3006
-
 const config = {
   plugins: [
     new HtmlWebpackPlugin({
-      template: './cli/csr/client/public.html'
+      template: './public/index.html'
     })
   ]
 }
