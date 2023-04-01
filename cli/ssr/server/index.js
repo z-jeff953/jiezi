@@ -8,7 +8,7 @@ import express from 'express'
 import ClientApp from '../../client/app'
 import serverApp from '../../server/app'
 
-import { run } from '../../server/index'
+import '../../server/index'
 
 const htmlPath = path.resolve(
   process.env.NODE_ENV === 'production'
