@@ -4,7 +4,7 @@ import App from '../../client/app'
 
 render(
   <React.StrictMode>
-    <App />
+    <App mode='csr' />
   </React.StrictMode>,
   document.getElementById('root')
 )

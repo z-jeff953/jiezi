@@ -34,5 +34,3 @@ serverApp.get('/', (req, res) => {
 })
 
 serverApp.use(express.static('./dist/ssr'))
-
-run()

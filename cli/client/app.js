@@ -1,7 +1,6 @@
 import React from 'react'
-
-export default function App() {
-  return (
-    <div>App</div>
-  )
+import { StaticRouter } from 'react-router-dom'
+import { renderRoutes } from 'react-router-config'
+export default function App () {
+  return <div>App</div>
 }
