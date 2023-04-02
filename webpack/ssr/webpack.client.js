@@ -3,7 +3,7 @@ const baseConfig = require('../webpack.base')
 const { merge } = require('webpack-merge')
 
 const config = {
-  entry: './cli/ssr/client/index.js',
+  entry: './cli/ssr/client/index.tsx',
   output: {
     path: path.resolve(
       path.join(__dirname, '../../'),

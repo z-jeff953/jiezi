@@ -1,6 +1,6 @@
 import {
   QuestionaryRepository,
-  IQuestionary,
+  IQuestionary
 } from '../../repositories/questionary-repository'
 
 export default (req, res) => {
@@ -19,10 +19,10 @@ export default (req, res) => {
   }
 }
 
-async function _post(req, res) {
+async function _post (req, res) {
   try {
     let questionaryRepository = new QuestionaryRepository()
-    let questionary: IQuestionary = JSON.parse(req.body) as IQuestionary
+    let questionary = JSON.parse(req.body)
     await questionaryRepository.addUser(questionary)
 
     res
@@ -31,7 +31,7 @@ async function _post(req, res) {
         'Access-Control-Allow-Headers': 'X-Requested-With',
         'Access-Control-Allow-Methods': 'PUT,POST,GET,DELETE,OPTIONS',
         'X-Powered-By': ' 3.2.1',
-        'Content-Type': 'application/json;charset=utf-8',
+        'Content-Type': 'application/json;charset=utf-8'
       })
       .send({ status: 'ok' })
     return

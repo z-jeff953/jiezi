@@ -8,14 +8,16 @@ require('dotenv').config({
 module.exports = {
   resolve: {
     alias: {
-      '@@': path.resolve(__dirname)
-    }
+      '@@': path.resolve(__dirname),
+      '@': './app'
+    },
+    extensions: ['.ts', '.tsx', '.js', 'jsx']
   },
   mode: 'development',
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -23,6 +25,19 @@ module.exports = {
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env', '@babel/preset-react']
+            }
+          },
+          'ts-loader'
+        ]
       }
     ]
   },

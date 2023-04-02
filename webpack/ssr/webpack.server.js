@@ -5,7 +5,7 @@ const { merge } = require('webpack-merge')
 const CopyPlugin = require('copy-webpack-plugin')
 
 const config = {
-  entry: './cli/ssr/server/index.js',
+  entry: './cli/ssr/server/index.tsx',
   output: {
     path: path.resolve(
       path.join(__dirname, '../../'),
